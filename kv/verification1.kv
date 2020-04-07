@@ -1,0 +1,189 @@
+#:import utils kivy.utils
+
+<VerificationScreen>: # the name should match the class
+    FloatLayout:
+
+        # 1st line
+        LabelButton:
+            pos_hint: {"top": 1, "left": 1}
+            size_hint: 0.1, 0.1
+            text: "<"
+            font_size: "20px"
+            on_release: app.change_screen('login_screen')
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#7030a0")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        Label:
+            pos_hint: {"top": 1, "right": 1}
+            size_hint: 0.9, 0.1
+            text: "log out"
+            text_size: self.size
+            halign: 'left'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#7030a0")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 2nd line
+        Label:
+            pos_hint: {"top": 0.9, "left": 1}
+            size_hint: 1, 0.1
+            text: "Please input your verification code to check your identity"
+            text_size: self.size
+            color: utils.get_color_from_hex("#000000")
+            font_size: '20sp'
+            halign: 'center'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 3rd line
+        Label:
+            pos_hint: {"top": 0.8, "left": 1}
+            size_hint: 1, 0.2
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 4th line
+        Label:
+            pos_hint: {"top": 0.6, "left": 1}
+            size_hint: 0.4, 0.1
+            text: "verification code"
+            text_size: self.size
+            color: utils.get_color_from_hex("#303030")
+            font_size: '15sp'
+            halign: 'center'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        Label:
+            pos_hint: {"top": 0.6, "right": 1}
+            size_hint: 0.6, 0.03
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        TextInput:
+            id: veri_code_ti
+            pos_hint: {"top": 0.57, "right": 1}
+            size_hint: 0.6, 0.06
+            halign: 'center'
+            multiline: False
+            background_color: 1, 1, 1, 1
+        Label:
+            pos_hint: {"top": 0.51, "right": 1}
+            size_hint: 0.6, 0.01
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 5th line
+        Label:
+            id = error_label
+            pos_hint: {"top": 0.5, "left": 1}
+            size_hint: 1, 0.2
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 6th line
+        GridLayout:
+            rows: 1
+            pos_hint: {"top": 0.3, "left": 1}
+            size_hint: 1, 0.1
+            Label:
+                pos_hint: {"top": 0.3, "left": 1}
+                size_hint: 0.03, 0.1
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#ffffff")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            GridLayout:
+                cols: 1
+                pos_hint: {"top": 0.3, "left": 0.97}
+                size_hint: 0.94, 0.1
+                Label:
+                    pos_hint: {"top": 0.3, "left": 0.97}
+                    size_hint: 0.94, 0.03
+                    canvas.before:
+                        Color:
+                            rgb: utils.get_color_from_hex("#ffffff")
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                LabelButton:
+                    pos_hint: {"top": 0.27, "left": 0.97}
+                    text: "check verification code and log in"
+                    color: utils.get_color_from_hex("#ffffff")
+                    font_size: "20px"
+                    on_release: app.doctor_login() # app.change_screen('login_screen')
+                    canvas.before:
+                        Color:
+                            rgb: utils.get_color_from_hex("#aaaaaa")
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                Label:
+                    pos_hint: {"top": 0.22, "left": 0.97}
+                    size_hint: 0.94, 0.02
+                    canvas.before:
+                        Color:
+                            rgb: utils.get_color_from_hex("#ffffff")
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+            Label:
+                pos_hint: {"top": 0.3, "right": 1}
+                size_hint: 0.03, 0.1
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#ffffff")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+
+        # 7th line
+        Label:
+            pos_hint: {"top": 0.2, "left": 1}
+            size_hint: 1, 0.2
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+
+
+
+
+
+

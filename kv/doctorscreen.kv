@@ -1,0 +1,231 @@
+
+#:import utils kivy.utils
+
+<DoctorScreen>:
+    FloatLayout:
+
+        # 1st line
+        LabelButton:
+            pos_hint: {"top": 1, "left": 1}
+            size_hint: 0.1, 0.1
+            text: "<"
+            font_size: "20px"
+            on_release: app.change_screen('veri_screen')
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#7030a0")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        Label:
+            pos_hint: {"top": 1, "right": 1}
+            size_hint: 0.9, 0.1
+            text: "go to verification"
+            text_size: self.size
+            halign: 'left'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#7030a0")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 2nd line
+        Label:
+            id: doct_info_label
+            pos_hint: {"top": 0.9, "left": 1}
+            size_hint: 1, 0.15
+            text: "personal information"
+            text_size: self.size
+            color: utils.get_color_from_hex("#000000")
+            font_size: '20sp'
+            halign: 'center'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 3rd line
+        Label:
+            pos_hint: {"top": 0.75, "left": 1}
+            size_hint: 0.4, 0.1
+            text: "department:"
+            text_size: self.size
+            color: utils.get_color_from_hex("#000000")
+            font_size: '20sp'
+            halign: 'center'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        Label:
+            id: doctor_depart
+            pos_hint: {"top": 0.75, "right": 1}
+            size_hint: 0.6, 0.1
+            text_size: self.size
+            color: utils.get_color_from_hex("#000000")
+            font_size: '20sp'
+            halign: 'center'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 4th line
+        Label:
+            pos_hint: {"top": 0.65, "left": 1}
+            size_hint: 0.4, 0.1
+            text: "address:"
+            text_size: self.size
+            color: utils.get_color_from_hex("#000000")
+            font_size: '20sp'
+            halign: 'center'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        Label:
+            id: doctor_addr
+            pos_hint: {"top": 0.65, "right": 1}
+            size_hint: 0.6, 0.1
+            text_size: self.size
+            color: utils.get_color_from_hex("#000000")
+            font_size: '20sp'
+            halign: 'center'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 5th line
+        Label:
+            id: error_label
+            pos_hint: {"top": 0.55, "left": 1}
+            size_hint: 1, 0.2
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 6th line
+        Label:
+            pos_hint: {"top": 0.35, "left": 1}
+            size_hint: 1, 0.15
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 7th line
+        GridLayout:
+            rows: 1
+            pos_hint: {"top": 0.2, "left": 1}
+            size_hint: 1, 0.1
+            Label:
+                pos_hint: {"top": 0.2, "left": 1}
+                size_hint: 0.04, 0.1
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#ffffff")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            LabelButton:
+                pos_hint: {"top": 0.2, "left": 0.96}
+                size_hint: 0.28, 0.1
+                text: "log out"
+                color: utils.get_color_from_hex("#ffffff")
+                font_size: "20px"
+                on_release: app.change_screen('login_screen')
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#aaaaaa")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Label:
+                pos_hint: {"top": 0.2, "left": 0.68}
+                size_hint: 0.04, 0.1
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#ffffff")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            LabelButton:
+                id: diag_button
+                pos_hint: {"top": 0.2, "left": 0.64}
+                size_hint: 0.28, 0.1
+                text: "diagnosis"
+                color: utils.get_color_from_hex("#ffffff")
+                font_size: "20px"
+                on_release: app.select_patients() # app.change_screen('login_screen')
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#aaaaaa")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Label:
+                pos_hint: {"top": 0.2, "left": 0.36}
+                size_hint: 0.04, 0.1
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#ffffff")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            LabelButton:
+                pos_hint: {"top": 0.2, "left": 0.32}
+                size_hint: 0.28, 0.1
+                text: "emergency"
+                color: utils.get_color_from_hex("#ffffff")
+                font_size: "20px"
+                on_release: root.change_screen() # app.change_screen('login_screen')
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#aaaaaa")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Label:
+                pos_hint: {"top": 0.2, "left": 0.04}
+                size_hint: 0.04, 0.1
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#ffffff")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+
+        # 8th line
+        Label:
+            pos_hint: {"top": 0.1, "left": 1}
+            size_hint: 1, 0.1
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+

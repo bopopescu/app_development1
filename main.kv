@@ -1,0 +1,52 @@
+#:include kv/loginscreen.kv
+#:include kv/settingscreen.kv
+#:include kv/personalscreen.kv
+#:include kv/homescreen.kv
+#:include kv/veriscreen.kv
+#:include kv/doctorscreen.kv
+#:include kv/docdiagscreen.kv
+#:include kv/docemerscreen.kv
+#:include kv/patdiagscreen.kv
+#:include kv/patemerscreen.kv
+
+GridLayout:
+    cols: 1
+    ScreenManager:
+        id: screen_manager
+        LoginScreen:
+            name:"login_screen"
+            id: login_screen
+        PatdiagScreen:
+            name:"patdiag_screen"
+            id: patdiag_screen
+        DocdiagScreen:
+            name:"docdiag_screen"
+            id: docdiag_screen
+        VeriScreen:
+            name: "veri_screen"
+            id: veri_screen
+        DoctorScreen:
+            name:"doctor_screen"
+            id: doctor_screen
+        DocemerScreen:
+            name:"docemer_screen"
+            id: docemer_screen
+        PatemerScreen:
+            name: "patemer_screen"
+            id: patemer_screen
+        VerificationScreen:
+            name:"verification_screen"
+            id: verification_screen
+        PersonalScreen:
+            name: "personal_screen"
+            id: personal_screen
+        SettingScreen:
+            name:"setting_screen"
+            id: setting_screen
+        HomeScreen:
+            name:"home_screen"
+            id: home_screen
+        VerificationScreen:
+            name:"verification_screen"
+            id: verification_screen
+

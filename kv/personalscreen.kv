@@ -1,0 +1,325 @@
+#:import utils kivy.utils
+
+<PersonalScreen>
+    FloatLayout:
+
+        # 1st line
+        LabelButton:
+            pos_hint: {"top": 1, "left": 1}
+            size_hint: 0.1, 0.1
+            text: "<"
+            font_size: "20px"
+            on_release: app.change_screen('login_screen')
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#7030a0")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        Label:
+            pos_hint: {"top": 1, "right": 1}
+            size_hint: 0.9, 0.1
+            text: "back to login page"
+            text_size: self.size
+            halign: 'left'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#7030a0")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 2nd line
+        Label:
+            pos_hint: {"top": 0.9, "left": 1}
+            size_hint: 1, 0.1
+            text: "Personal Information"
+            text_size: self.size
+            color: utils.get_color_from_hex("#707070")
+            font_size: '25sp'
+            halign: 'center'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 3rd line
+        Image:
+            source: "icon/sun.png"
+            pos_hint: {"top": 0.8, "left": 1}
+            size_hint: 0.3, 0.1
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        Label:
+            id: username_label
+            pos_hint: {"top": 0.8, "right": 1}
+            size_hint: 0.7, 0.1
+            text_size: self.size
+            color: utils.get_color_from_hex("#707070")
+            font_size: '25sp'
+            halign: 'center'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 4rd line
+        Label:
+            pos_hint: {"top": 0.7, "left": 1}
+            size_hint: 0.5, 0.1
+            text: 'Gender'
+            text_size: self.size
+            color: utils.get_color_from_hex("#000000")
+            font_size: '15sp'
+            halign: 'center'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        Label:
+            pos_hint: {"top": 0.7, "right": 1}
+            size_hint: 0.5, 0.03
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        TextInput:
+            id: gender_ti
+            pos_hint: {"top": 0.67, "right": 1}
+            size_hint: 0.5, 0.05
+            text_size: self.size
+            color: utils.get_color_from_hex("#000000")
+            halign: 'center'
+        Label:
+            pos_hint: {"top": 0.62, "right": 1}
+            size_hint: 0.5, 0.02
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 5td line
+        Label:
+            pos_hint: {"top": 0.6, "left": 1}
+            size_hint: 0.5, 0.1
+            text: 'Birthday'
+            text_size: self.size
+            color: utils.get_color_from_hex("#000000")
+            font_size: '15sp'
+            halign: 'center'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        Label:
+            pos_hint: {"top": 0.6, "right": 1}
+            size_hint: 0.5, 0.03
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        TextInput:
+            id: age_ti
+            pos_hint: {"top": 0.57, "right": 1}
+            size_hint: 0.5, 0.05
+            text_size: self.size
+            color: utils.get_color_from_hex("#000000")
+            halign: 'center'
+        Label:
+            pos_hint: {"top": 0.52, "right": 1}
+            size_hint: 0.5, 0.02
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 6th line
+        Label:
+            pos_hint: {"top": 0.5, "left": 1}
+            size_hint: 0.5, 0.1
+            text: 'Address'
+            text_size: self.size
+            color: utils.get_color_from_hex("#000000")
+            font_size: '15sp'
+            halign: 'center'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        Label:
+            pos_hint: {"top": 0.5, "right": 1}
+            size_hint: 0.5, 0.03
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        TextInput:
+            id: address_ti
+            pos_hint: {"top": 0.47, "right": 1}
+            size_hint: 0.5, 0.05
+            text_size: self.size
+            color: utils.get_color_from_hex("#000000")
+            halign: 'center'
+        Label:
+            pos_hint: {"top": 0.42, "right": 1}
+            size_hint: 0.5, 0.02
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 7th line
+        Label:
+            pos_hint: {"top": 0.4, "left": 1}
+            size_hint: 0.5, 0.1
+            text: 'Blood Type'
+            text_size: self.size
+            color: utils.get_color_from_hex("#000000")
+            font_size: '15sp'
+            halign: 'center'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        Label:
+            pos_hint: {"top": 0.4, "right": 1}
+            size_hint: 0.5, 0.03
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        TextInput:
+            id: blood_ti
+            pos_hint: {"top": 0.37, "right": 1}
+            size_hint: 0.5, 0.05
+            text_size: self.size
+            color: utils.get_color_from_hex("#000000")
+            halign: 'center'
+        Label:
+            pos_hint: {"top": 0.32, "right": 1}
+            size_hint: 0.5, 0.02
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 8th line
+        Label:
+            pos_hint: {"top": 0.3, "left": 1}
+            size_hint: 0.5, 0.1
+            text: 'Penicillin Allergy'
+            text_size: self.size
+            color: utils.get_color_from_hex("#000000")
+            font_size: '15sp'
+            halign: 'center'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        Label:
+            pos_hint: {"top": 0.3, "right": 1}
+            size_hint: 0.5, 0.03
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        TextInput:
+            id: pen_it
+            pos_hint: {"top": 0.27, "right": 1}
+            size_hint: 0.5, 0.05
+            text_size: self.size
+            color: utils.get_color_from_hex("#000000")
+            halign: 'center'
+        Label:
+            pos_hint: {"top": 0.22, "right": 1}
+            size_hint: 0.5, 0.02
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 9th line
+        Label:
+            pos_hint: {"top": 0.2, "left": 1}
+            size_hint: 1, 0.05
+            id: confirm_check_label
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 10th line
+        LabelButton:
+            pos_hint: {"top": 0.15, "left": 1}
+            size_hint: 1, 0.1
+            text: "[confirm]"
+            color: utils.get_color_from_hex("#000000")
+            font_size: "20px"
+            on_release: app.confirm_user_info()
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 11th line
+        Label:
+            pos_hint: {"top": 0.05, "left": 1}
+            size_hint: 1, 0.05
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+

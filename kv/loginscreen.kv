@@ -1,0 +1,255 @@
+#:import utils kivy.utils
+
+<LoginScreen>
+    FloatLayout:
+
+        # 1st line
+        Label:
+            pos_hint: {"top": 1, "left": 1}
+            size_hint: 0.02, 0.1
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#7030a0")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        Label:
+            pos_hint: {"top": 1, "right": 1}
+            size_hint: 0.98, 0.1
+            text: "TGH LOGIN PLEASE"
+            text_size: self.size
+            halign: 'left'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#7030a0")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 2nd line
+        Label:
+            pos_hint: {"top": 0.9, "left": 1}
+            size_hint: 1, 0.1
+            text: "Welcome to TGH Home HealthCare"
+            text_size: self.size
+            color: utils.get_color_from_hex("#000000")
+            font_size: '20sp'
+            halign: 'center'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 3rd line
+        Label:
+            pos_hint: {"top": 0.8, "left": 1}
+            size_hint: 0.4, 0.1
+            text: "Input Name"
+            text_size: self.size
+            color: utils.get_color_from_hex("#303030")
+            font_size: '15sp'
+            halign: 'center'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        Label:
+            pos_hint: {"top": 0.8, "right": 1}
+            size_hint: 0.6, 0.03
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        TextInput:
+            id: user_name_field
+            pos_hint: {"top": 0.77, "right": 1}
+            size_hint: 0.6, 0.06
+            halign: 'center'
+            multiline: False
+            background_color: 1, 1, 1, 1
+        Label:
+            pos_hint: {"top": 0.71, "right": 1}
+            size_hint: 0.6, 0.01
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 4th line
+        Label:
+            pos_hint: {"top": 0.7, "left": 1}
+            size_hint: 0.4, 0.1
+            text: "Password"
+            text_size: self.size
+            color: utils.get_color_from_hex("#303030")
+            font_size: '15sp'
+            halign: 'center'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        Label:
+            pos_hint: {"top": 0.7, "right": 1}
+            size_hint: 0.6, 0.03
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        TextInput:
+            id: pass_word_field
+            pos_hint: {"top": 0.67, "right": 1}
+            size_hint: 0.6, 0.06
+            halign: 'center'
+            multiline: False
+            background_color: 1, 1, 1, 1
+        Label:
+            pos_hint: {"top": 0.61, "right": 1}
+            size_hint: 0.6, 0.01
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 5th line
+        Label:
+            pos_hint: {"top": 0.6, "left": 1}
+            size_hint: 1, 0.1
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 6th line top 0.5
+        GridLayout:
+            rows: 1
+            pos_hint: {"top": 0.5, "left": 1}
+            size_hint: 1, 0.05
+            Label:
+                pos_hint: {"top": 0.5, "left": 1}
+                size_hint: 0.05, 0.05
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#ffffff")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Button:
+                pos_hint: {"top": 0.5, "left": 0.95}
+                size_hint: 0.445, 0.05
+                text: "NEW ACCOUNT"
+                on_release: app.create_new_account()
+            Label:
+                pos_hint: {"top": 0.5, "left": 0.505}
+                size_hint: 0.025, 0.05
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#ffffff")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Button:
+                pos_hint: {"top": 0.5, "left": 0.48}
+                size_hint: 0.43, 0.05
+                text: "SUBMIT"
+                on_release: app.validate_user_name()
+                canvas.before:
+                    Color:
+                        rgba:.0, .0, .0, 1
+                    Line:
+                        width: 2
+                        rectangle: self.x, self.y, self.width, self.height
+
+            Label:
+                pos_hint: {"top": 0.5, "left": 0.05}
+                size_hint: 0.05, 0.05
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#ffffff")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+
+        # 7th line top 0.45
+        Label:
+            pos_hint: {"top": 0.45, "left": 1}
+            size_hint: 1, 0.05
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 8th line top 0.4
+        Label:
+            pos_hint: {"top": 0.4, "left": 1}
+            size_hint: 1, 0.1
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 9th line top 0.3
+        Label:
+            id: login_info_label
+            pos_hint: {"top": 0.3, "left": 1}
+            size_hint: 1, 0.1
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 10th line top 0.2
+        Label:
+            id: login_info
+            pos_hint: {"top": 0.2, "left": 1}
+            size_hint: 1, 0.1
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 11th line top 0.1
+        Button:
+            pos_hint: {"top": 0.1, "left": 1}
+            size_hint: 1, 0.05
+            text: "Login as a doctor"
+            on_release: app.change_screen('veri_screen')
+
+        # 12th line top 0.05
+        Label:
+            id: login_info
+            pos_hint: {"top": 0.05, "left": 1}
+            size_hint: 1, 0.05
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos

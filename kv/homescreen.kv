@@ -1,0 +1,268 @@
+#:import utils kivy.utils
+
+<HomeScreen>:
+    FloatLayout:
+
+        # 1st line
+        LabelButton:
+            pos_hint: {"top": 1, "left": 1}
+            size_hint: 0.1, 0.1
+            text: "<"
+            font_size: "20px"
+            on_release: app.change_screen('login_screen')
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#7030a0")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        Label:
+            pos_hint: {"top": 1, "right": 1}
+            size_hint: 0.9, 0.1
+            text: "log out"
+            text_size: self.size
+            halign: 'left'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#7030a0")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 2nd line
+        Label:
+            pos_hint: {"top": 0.9, "left": 1}
+            size_hint: 1, 0.05
+            text: "Global News"
+            text_size: self.size
+            color: utils.get_color_from_hex("#000000")
+            font_size: '20sp'
+            halign: 'center'
+            valign: 'middle'
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 3rd line
+        GridLayout:
+            rows: 1
+            pos_hint: {"top": 0.85, "left": 1}
+            size_hint: 1, 0.19
+            Label:
+                pos_hint: {"top": 0.85, "left": 1}
+                size_hint: 0.01, 0.19
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#ffffff")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            LabelButton:
+                pos_hint: {"top": 0.85, "left": 0.99}
+                size_hint: 0.98, 0.19
+                text: "1st news"
+                color: utils.get_color_from_hex("#000000")
+                font_size: "20px"
+                on_release: print('this is the 1st news') # app.change_screen('login_screen')
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#ffffff")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+
+        # 3rd line plus
+        Label:
+            pos_hint: {"top": 0.66, "left": 1}
+            size_hint: 1, 0.01
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 4rd line
+        GridLayout:
+            rows: 1
+            pos_hint: {"top": 0.65, "left": 1}
+            size_hint: 1, 0.19
+            Label:
+                pos_hint: {"top": 0.65, "left": 1}
+                size_hint: 0.01, 0.19
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#ffffff")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            LabelButton:
+                pos_hint: {"top": 0.65, "left": 0.99}
+                size_hint: 0.98, 0.19
+                text: "2nd news"
+                color: utils.get_color_from_hex("#000000")
+                font_size: "20px"
+                on_release: print('this is the 2nd news') # app.change_screen('login_screen')
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#ffffff")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+
+        # 4rd line plus
+        Label:
+            pos_hint: {"top": 0.46, "left": 1}
+            size_hint: 1, 0.01
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 5th line
+        GridLayout:
+            rows: 1
+            pos_hint: {"top": 0.45, "left": 1}
+            size_hint: 1, 0.19
+            Label:
+                pos_hint: {"top": 0.45, "left": 1}
+                size_hint: 0.01, 0.19
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#ffffff")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            LabelButton:
+                pos_hint: {"top": 0.45, "left": 0.99}
+                size_hint: 0.98, 0.19
+                text: "3rd news"
+                color: utils.get_color_from_hex("#000000")
+                font_size: "20px"
+                on_release: print('this is the 3rd news') # app.change_screen('login_screen')
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#ffffff")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+        # 5th line plus
+        Label:
+            pos_hint: {"top": 0.26, "left": 1}
+            size_hint: 1, 0.01
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 6th line plus
+        Label:
+            pos_hint: {"top": 0.25, "left": 1}
+            size_hint: 1, 0.05
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        # 7th line plus
+        GridLayout:
+            rows: 1
+            pos_hint: {"top": 0.2, "left": 1}
+            size_hint: 1, 0.1
+            Label:
+                pos_hint: {"top": 0.2, "left": 1}
+                size_hint: 0.04, 0.1
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#ffffff")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            LabelButton:
+                pos_hint: {"top": 0.2, "left": 0.96}
+                size_hint: 0.28, 0.1
+                text: "setting"
+                color: utils.get_color_from_hex("#ffffff")
+                font_size: "20px"
+                on_release: app.change_screen('personal_screen')
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#aaaaaa")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Label:
+                pos_hint: {"top": 0.2, "left": 0.68}
+                size_hint: 0.04, 0.1
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#ffffff")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            LabelButton:
+                pos_hint: {"top": 0.2, "left": 0.64}
+                size_hint: 0.28, 0.1
+                text: "diagnosis"
+                color: utils.get_color_from_hex("#ffffff")
+                font_size: "20px"
+                on_release: app.go_to_patient_diagnosis() # app.change_screen('patdiag_screen')
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#aaaaaa")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Label:
+                pos_hint: {"top": 0.2, "left": 0.36}
+                size_hint: 0.04, 0.1
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#ffffff")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            LabelButton:
+                pos_hint: {"top": 0.2, "left": 0.32}
+                size_hint: 0.28, 0.1
+                text: "emergency"
+                color: utils.get_color_from_hex("#ffffff")
+                font_size: "20px"
+                on_release: print('this is the 3rd news') # app.change_screen('login_screen')
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#aaaaaa")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Label:
+                pos_hint: {"top": 0.2, "left": 0.04}
+                size_hint: 0.04, 0.1
+                canvas.before:
+                    Color:
+                        rgb: utils.get_color_from_hex("#ffffff")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+
+        # 8th line plus
+        Label:
+            pos_hint: {"top": 0.1, "left": 1}
+            size_hint: 1, 0.1
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#ffffff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+

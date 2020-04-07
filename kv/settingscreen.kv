@@ -1,0 +1,23 @@
+<SettingScreen>: # the name should match the class
+    BoxLayout:
+        size_hint_y: None
+        height: 30
+        canvas.before:
+            Color:
+                rgb: utils.get_color_from_hex("#7030a0")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Label:
+            id: upper_holder_label
+            size_hint_x: None
+            width: 10
+        Label:
+            id: upper_label
+            size_hint_x: None
+            text_size: self.size
+            halign: "left"
+            valign: "middle"
+            text: "My Application"
+
+
