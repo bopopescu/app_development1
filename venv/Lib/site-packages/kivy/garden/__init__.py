@@ -53,7 +53,7 @@ install and use it. Otherwise, continue with the guide below.
 Garden flowers can now be installed with the `pip` tool like a normal python
 package. Given a flower that you want to install, lets use
 `graph <https://github.com/kivy-garden/graph>`_ as an example. You can install
-master directly from github with::
+main directly from github with::
 
     python -m pip install \
 https://github.com/kivy-garden/graph/archive/master.zip
